@@ -8,15 +8,16 @@ export async function uploadAnImageToBlob(file: File) {
 
   const filename = file.name.replaceAll(" ", "_");
   const newFileName = "image" + uuid() + filename;
-
+  console.log("Looking to upload: "+newFileName);
   const options = { blobHTTPHeaders: { blobContentType: file.type } };
 
   // Client
   const client = BlobServiceClient.fromConnectionString(connString);
   const containerClient = client.getContainerClient("images");
+  console.log("uploading");
   const blockBlobClient = containerClient.getBlockBlobClient(newFileName);
 
   await blockBlobClient.uploadData(await file.arrayBuffer(), options);
-
+  console.log("File uploaded");
   return newFileName;
 }
