@@ -160,7 +160,7 @@ const FileUpload = ({
                     <Button
                       buttonClasses="tw-mt-xs"
                       label={submitFileLabel}
-                      onClick={handleUpload}
+                      onClick={form.handleSubmit(handleUpload)}
                       disabled={status === FileStatuses.UPLOADING || status === FileStatuses.SUCCESS}
                     />
                   ) : (
