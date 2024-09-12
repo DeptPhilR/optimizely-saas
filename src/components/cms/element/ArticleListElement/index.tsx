@@ -36,7 +36,7 @@ export const ArticleListElement: CmsComponent<ArticleListElementDataFragment> = 
   if (articleCount > articles.length) {
     const missingItems = articleCount - articles.length;
     for (let index = 0; index < missingItems; index++) {
-      articles.push(articles[0]);
+      articles.push(articles[index]);
     }
   }
 
