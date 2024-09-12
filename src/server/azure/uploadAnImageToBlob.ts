@@ -12,13 +12,22 @@ export async function uploadAnImageToBlob(file: File) {
   const options = { blobHTTPHeaders: { blobContentType: file.type } };
 
   // Client
-  const client = BlobServiceClient.fromConnectionString(connString);
-  console.log("connected to blob storage");
-  const containerClient = client.getContainerClient("images");
-  console.log("getting container");
-  const blockBlobClient = containerClient.getBlockBlobClient(newFileName);
-  console.log("getting blobblockclient");
-  await blockBlobClient.uploadData(await file.arrayBuffer(), options);
-  console.log("File uploaded");
+  try
+  {
+    const client = BlobServiceClient.fromConnectionString(connString);
+    console.log("connected to blob storage");
+    const containerClient = client.getContainerClient("images");
+    console.log("getting container");
+    const blockBlobClient = containerClient.getBlockBlobClient(newFileName);
+    console.log("getting blobblockclient");
+    await blockBlobClient.uploadData(await file.arrayBuffer(), options);
+    console.log("File uploaded");
+  }
+  catch(e:unknown)
+  {
+    if (e instanceof Error) {
+    console.log("An error occurec conecting to blob storage. "+e.message);
+    }
+  }
   return newFileName;
 }
