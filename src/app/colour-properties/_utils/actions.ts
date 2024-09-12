@@ -2,12 +2,13 @@
 import { getComplimentaryColours } from "@/server/azure/getComplimentaryColours";
 import { uploadAnImageToBlob } from "@/server/azure/uploadAnImageToBlob";
 import { visionAnalyzeImage } from "@/server/vision/visionAnalyzeImage";
+import { error } from "console";
 import { redirect } from "next/navigation";
 
 export async function getComplimentaryColoursAction(formData: FormData) {
   const file = formData.get("file") as File;
   const searchParams = new URLSearchParams();
-
+  console.log("Calling getComplimentaryColours with file.");
   const _return: {
     error: string | null;
     complimentaryColours: string[] | null;
@@ -52,7 +53,7 @@ export async function getComplimentaryColoursAction(formData: FormData) {
 
   const redirectUrl = searchParams.size
     ? "/colour-properties?" + searchParams?.toString()
-    : "/colour-properties";
+    : "/error?" + error;
 
   redirect(redirectUrl);
 }
