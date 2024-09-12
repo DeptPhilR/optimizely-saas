@@ -194,7 +194,7 @@ const FileUpload = ({
                     modifier="outline"
                     onClick={() => {
                       setStatus(FileStatuses.UPLOADING);
-                      formRef?.current?.submit();
+                      formRef?.current?.requestSubmit();
                     }}
                     disabled={status === FileStatuses.UPLOADING || status === FileStatuses.SUCCESS}
                   />
