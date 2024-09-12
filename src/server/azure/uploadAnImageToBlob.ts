@@ -13,6 +13,7 @@ export async function uploadAnImageToBlob(file: File) {
 
   // Client
   const client = BlobServiceClient.fromConnectionString(connString);
+  console.log("connected to client");
   const containerClient = client.getContainerClient("images");
   console.log("uploading");
   const blockBlobClient = containerClient.getBlockBlobClient(newFileName);
