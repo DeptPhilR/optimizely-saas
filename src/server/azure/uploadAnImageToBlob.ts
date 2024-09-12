@@ -14,6 +14,7 @@ export async function uploadAnImageToBlob(file: File) {
   // Client
   try
   {
+   
     const client = BlobServiceClient.fromConnectionString(connString);
     console.log("connected to blob storage");
     const containerClient = client.getContainerClient("images");
@@ -26,7 +27,8 @@ export async function uploadAnImageToBlob(file: File) {
   catch(e:unknown)
   {
     if (e instanceof Error) {
-    console.log("An error occurec conecting to blob storage. "+e.message);
+    console.warn("An error occured conecting to blob storage. "+e.message);
+    console.warn("Connstring"+ connString);
     }
   }
   return newFileName;
