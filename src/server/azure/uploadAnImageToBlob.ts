@@ -1,3 +1,4 @@
+import componentDictionary from "@/components/cms/component";
 import { BlobServiceClient } from "@azure/storage-blob";
 import { v4 as uuid } from "uuid";
 
@@ -12,6 +13,7 @@ export async function uploadAnImageToBlob(file: File) {
   const options = { blobHTTPHeaders: { blobContentType: file.type } };
 
   // Client
+  console.log("connecting to: "+connString);
   const client = BlobServiceClient.fromConnectionString(connString);
   console.log("connected to client");
   const containerClient = client.getContainerClient("images");
