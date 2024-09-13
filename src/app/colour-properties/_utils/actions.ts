@@ -2,6 +2,7 @@
 import { getComplimentaryColours } from "@/server/azure/getComplimentaryColours";
 import { uploadAnImageToBlob } from "@/server/azure/uploadAnImageToBlob";
 import { visionAnalyzeImage } from "@/server/vision/visionAnalyzeImage";
+import { redirect } from "next/navigation";
 
 export async function getComplimentaryColoursAction(formData: FormData) {
   const file = formData.get("file") as File;
@@ -53,5 +54,5 @@ export async function getComplimentaryColoursAction(formData: FormData) {
     ? "/colour-properties?" + searchParams?.toString()
     : "/error?"
 
-  //redirect(redirectUrl);
+  redirect(redirectUrl);
 }
