@@ -79,14 +79,14 @@ const FileUpload = ({
 
       try {
         if (!endpoint) throw new Error('no endpoint setup');
-
+        console.log("posting formdata");
         const response = await fetch(endpoint, {
           method: 'POST',
           body: formData,
         });
 
         setStatus(response.ok ? FileStatuses.SUCCESS : FileStatuses.FAIL);
-
+        console.log("making uploadcallback");
         uploadCallback?.();
       } catch (error) {
         console.error(error);

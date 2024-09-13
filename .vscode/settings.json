@@ -3,7 +3,7 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false
   },
-  "[javascript, javascriptreact, typescript, typescriptreact]": {
+  "[javascript, javareact, typescript, typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true
