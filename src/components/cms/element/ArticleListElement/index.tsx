@@ -60,13 +60,14 @@ export const ArticleListElement: CmsComponent<ArticleListElementDataFragment> = 
           } else {
             authors = authorList[0];
           }
+          const link = "blog/"+article.articleTitle?.replaceAll(" ","-");
 
           return (
             <div
               key={article.articleMeta?.key + Math.random().toString()}
               className="tw-article-list-item tw-relative tw-h-full tw-w-full"
             >
-              <CmsContentLink href={article}>
+              <CmsContentLink href={link}>
                 {/*
                   <article className="prose max-w-none p-8 pb-16 bg-white rounded-[20px] w-full h-full before:content-[''] before:absolute before:top-[1px] before:left-[1px] before:w-[calc(100%-2px)] before:h-[calc(100%-2px)] before:z-[-1] before:rounded-[20px] before:bg-azure before:transition-transform before:ease-in-out before:duration-300 hover:before:translate-x-8 hover:before:translate-y-8 focus:before:translate-x-8 focus:before:translate-y-8 dark:bg-vulcan-85 dark:text-ghost-white">
                 */}
