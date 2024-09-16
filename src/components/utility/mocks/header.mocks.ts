@@ -64,8 +64,44 @@ export const header: IHeader = {
   navigation: [
     {
       link: {
-        text: 'Home',
+        text: 'Colour Picker',
         url: '/home',
+        linkIcon: 'arrow-right',
+        target: 'self',
+      },
+      children: [{
+        text: 'Colour picker home',
+        url: '/home',
+        linkIcon: 'arrow-right',
+        target: 'self',
+      },{
+        text: 'Morning/Indoor',
+        url: '/home?optimizely_token=01298a0fe8985eaa7b8b70cf0edfce572d00b349bff4fecb951023a211049f67&optimizely_x=30252860836&optimizely_x_audiences=30302500176&optimizely_preview_layer_ids=30290280771&optimizely_snippet=s3-30057130179',
+        linkIcon: 'arrow-right',
+        target: 'self',
+      }
+      ,{
+        text: 'Morning/Outdoor',
+        url: '/home?optimizely_token=01298a0fe8985eaa7b8b70cf0edfce572d00b349bff4fecb951023a211049f67&optimizely_x=30260680730&optimizely_x_audiences=30268310336&optimizely_preview_layer_ids=30290280771&optimizely_snippet=s3-30057130179',
+        linkIcon: 'arrow-right',
+        target: 'self',
+      },{
+        text: 'Evening/Indoor',
+        url: '/home?optimizely_token=01298a0fe8985eaa7b8b70cf0edfce572d00b349bff4fecb951023a211049f67&optimizely_x=30293400316&optimizely_x_audiences=30302610118&optimizely_preview_layer_ids=30290280771&optimizely_snippet=s3-30057130179',
+        linkIcon: 'arrow-right',
+        target: 'self',
+      },{
+        text: 'Evening/Outdoor',
+        url: '/home?optimizely_token=01298a0fe8985eaa7b8b70cf0edfce572d00b349bff4fecb951023a211049f67&optimizely_x=30333290062&optimizely_x_audiences=30317210281&optimizely_preview_layer_ids=30290280771&optimizely_snippet=s3-30057130179',
+        linkIcon: 'arrow-right',
+        target: 'self',
+      }
+    ],
+    },
+    {
+      link: {
+        text: 'Blog',
+        url: '/Blog',
         linkIcon: 'arrow-right',
         target: 'self',
       },

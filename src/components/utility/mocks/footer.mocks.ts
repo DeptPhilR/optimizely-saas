@@ -1,6 +1,6 @@
-import { svgImage } from "./image.mocks";
 import SiteEnum from "@/components/models/enums/SiteEnum";
 import { IFooter } from "@/components/models/IFooter";
+import { svgImage } from "./image.mocks";
 import socialLinksMock from "./socialLinks.mocks";
 
 export const footer: IFooter = {
@@ -9,7 +9,7 @@ export const footer: IFooter = {
   text: "Learn more about Jotun or visit other industry pages.",
   cta: {
     text: "Go to jotun.com",
-    url: "/",
+    url: "www.jotun.com",
     linkIcon: "arrow-right",
     target: "self",
   },
@@ -18,27 +18,27 @@ export const footer: IFooter = {
       text: "About Us",
       url: "/about-us",
       linkIcon: "arrow-right",
-      target: "self",
+      target: "_blank",
     },
     {
       text: "Privacy Policy",
-      url: "/privacy-policy",
+      url: "https://www.jotun.com/no-en/about-jotun/legal/privacy-statement",
       linkIcon: "arrow-right",
-      target: "self",
+      target: "_blank",
     },
   ],
   secondaryLinks: [
     {
       text: "Careers",
-      url: "/careers",
+      url: "https://www.jotun.com/no-en/about-jotun/career/join-us",
       linkIcon: "arrow-right",
-      target: "self",
+      target: "_blank",
     },
     {
       text: "Contact Us",
-      url: "/contact-us",
+      url: "https://www.jotun.com/no-en/about-jotun/contact",
       linkIcon: "arrow-right",
-      target: "self",
+      target: "_blank",
     },
   ],
   copyrightNotice: "Jotun All Rights Reserved",
