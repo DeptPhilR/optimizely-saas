@@ -1,8 +1,8 @@
 
 
+import SiteEnum from '@/components/models/enums/SiteEnum';
 import { IHeader } from '@/components/models/IHeader';
 import image from './image.mocks';
-import SiteEnum from '@/components/models/enums/SiteEnum';
 
 export const header: IHeader = {
   accountLabel: 'account',
@@ -64,8 +64,8 @@ export const header: IHeader = {
   navigation: [
     {
       link: {
-        text: 'Indoor',
-        url: '/',
+        text: 'Home',
+        url: '/home',
         linkIcon: 'arrow-right',
         target: 'self',
       },
@@ -73,33 +73,33 @@ export const header: IHeader = {
     },
     {
       link: {
-        text: 'Indoors',
+        text: 'Jotun',
         url: '/',
         linkIcon: 'arrow-right',
         target: 'self',
       },
       highlightedLink: {
-        text: 'Highlighted',
-        url: '/',
+        text: 'Jotun x Dept',
+        url: 'https://www.deptagency.com/en-gb/case/a-complex-multi-site-multi-lingual-migration-to-optimizely/',
         linkIcon: 'arrow-right',
         target: 'self',
       },
       children: [
         {
-          text: 'One',
-          url: '/',
+          text: 'Home',
+          url: 'https://www.jotun.com/no-en',
           linkIcon: 'arrow-right',
           target: 'self',
         },
         {
-          text: 'Two',
-          url: '/',
+          text: 'Jotun x Optimizely',
+          url: 'https://www.optimizely.com/no/insights/jotun-b2b/',
           linkIcon: 'arrow-right',
           target: 'self',
         },
         {
-          text: 'Three',
-          url: '/',
+          text: 'Jotun Colour cards',
+          url: 'https://www.jotun.com/me-en/decorative/interior/colours/colourcards/128-jotun-colours',
           linkIcon: 'arrow-right',
           target: 'self',
         },
@@ -107,21 +107,21 @@ export const header: IHeader = {
     },
     {
       link: {
-        text: 'Outdoor',
+        text: 'Dept',
         url: '/',
         linkIcon: 'arrow-right',
         target: 'self',
       },
       children: [
         {
-          text: 'Indoor',
-          url: '/',
+          text: 'Home',
+          url: 'https://www.deptagency.com/en-gb/',
           linkIcon: 'arrow-right',
           target: 'self',
         },
         {
-          text: 'Outdoor',
-          url: '/',
+          text: 'Optimizely Expertise',
+          url: 'https://www.deptagency.com/en-gb/partner/optimizely/',
           linkIcon: 'arrow-right',
           target: 'self',
         },
@@ -130,8 +130,8 @@ export const header: IHeader = {
   ],
   secondaryLinks: [
     {
-      text: 'SubNav One',
-      url: '/',
+      text: 'Optimizely Hackathon',
+      url: 'https://www.optimizely.com/insights/hackathon-london-finals/',
       linkIcon: 'arrow-right',
       target: 'self',
     },
@@ -151,19 +151,19 @@ export const header: IHeader = {
   ],
   quickLinks: [
     {
-      text: 'Quick Link One',
-      url: '/',
+      text: 'Optimizely Hackathon',
+      url: 'https://www.optimizely.com/insights/hackathon-london-finals/',
       linkIcon: 'arrow-right',
       target: '_blank',
     },
     {
-      text: 'Quick Link Two',
-      url: '/',
+      text: 'Optimizely SaaS',
+      url: 'https://docs.developers.optimizely.com/content-management-system/v1.0.0-CMS-SaaS/docs/overview-of-cms-saas',
       linkIcon: 'arrow-right',
-      target: 'self',
+      target: '_blank',
     },
   ],
-  title: 'MyJotun',
+  title: 'Jotun Colour Picker',
 };
 
 export default header;

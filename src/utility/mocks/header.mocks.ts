@@ -61,8 +61,8 @@ export const headerData: IHeader = {
   navigation: [
     {
       link: {
-        text: 'Indoor',
-        url: '/',
+        text: 'Colour Picker',
+        url: '/home',
         linkIcon: 'arrow-right',
         target: 'self',
       },
@@ -160,7 +160,7 @@ export const headerData: IHeader = {
       target: 'self',
     },
   ],
-  title: 'MyJotun',
+  title: 'Jotun Colour Picker',
   site: SiteEnum.B2B
 };
 
